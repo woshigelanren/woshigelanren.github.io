@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+* {margin:0;padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul,li {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+abbr,acronym {border:0;}
+a {text-decoration:none;color:#5a5a5a;}
+a:hover {text-decoration:none;color:#f28000;}
+body {color: #5a5a5a;font-size:14px;line-height:1.5em;font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", Heiti, "黑体", sans-serif;background:#f6f6f6;}
+h1,h2,h3,h4,h5,h6 {font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", Heiti, "黑体", sans-serif;}
+::-moz-placeholder {color:#aaa;opacity:1!important;}
+:-ms-input-placeholder {color:#aaa;}
+::-webkit-input-placeholder {color:#aaa;}
+.wrap-scr {width: 1200px;margin: 0 auto;overflow:hidden;}
+.wrap-over {width:1220px;overflow:auto;zoom:1;}
+.left {float:left;}
+.right {float:right;}
+.orange {color:#f28000;}
+.green {color:#40b29b;}
+.box-normal {border:1px solid #ddd;background:#fff;}
+.mt20 {margin-top:20px;}
+
+/* reset bootstrap */
+* {box-sizing:content-box;}
+dt,label {font-weight:normal;}
+
+/* button */
+.btn-wht-m {display:block;width:220px;height:50px;margin:0 auto;text-align:center;font-size:18px;line-height:50px;background-color:#fff;}
+.btn-wht-m:hover {color:#5a5a5a;}
+
+/* header */
+#header {height:150px;background:#fff;overflow:hidden;}
+#header .main {height:100px;}
+#logo {float:left;}
+#logo a {display:block;width:160px;height:48px;margin:26px 40px 0 0;text-indent:-9999em;background:url("../../images/fruit/tubiao/header_logo.png") no-repeat 0 0;}
+#slogan {float:left;font-size:15px;line-height:100px;}
+#slogan {float:left;width:250px;text-indent:-9999em;background:url("../../images/fruit/tubiao/header_slogan.png") no-repeat 0 39px;}
+#navbar {height:50px;background:#f28000;}
+#nav li {float:left;font-size:18px;}
+#nav li a {display:block;padding:0 60px;line-height:50px;color:#fff;}
+#nav li a:hover {background:#df7600;}
+#nav .current a {background:#f93;}
+#nav .current a:hover {background:#f93;}
+#navbar .phone {display:block;float:right;width:209px;height:50px;background:url("../../images/fruit/tubiao/header_phone.png") no-repeat 0 9px;text-indent:-9999em;}
+.search_func {float:right;margin-top:30px;width:450px;height:40px;background:url("../../images/fruit/tubiao/search_mainbg.png") no-repeat 0 0;}
+.search_func .left {width:320px;padding:2px 2px 2px 48px;height:36px;}
+.search_func .left input {border:none;font-size:14px;color:#525252;height:36px;width:300px;}
+.search_func .right {width:80px;height:40px;}
+.search_func .right input {display:block;width:80px;height:40px;color:#fff;font-size:16px;border:none;padding:0;margin:0;background:none;cursor:pointer;}
+
+/* footer */
+#footer {width:100%;margin-top:60px;background:#56626a;color:#fff;}
+#footer a {color:#fff;}
+#footer .wrap-scr {height:186px;}
+#footer .menu {font-size:15px;word-spacing:1em;margin-top:60px;}
+#footer .copyright {word-spacing:2em;margin-top:30px;}
+#footer .right {float:right;width:106px;padding-top:40px;text-align:center;font-size:12px;color:#b7bbbe;}
+#footer .right img {display:inline-block;}
+#footer .links {border-top:1px solid #646f76;text-align:center;padding-top:30px;height:83px;}
+#footer .links img {display:inline-block;margin:0 30px;}
+
+/* 我们的优势 */
+#ourads {height:78px;padding-top:32px;background:#fff;border-bottom:1px solid #ddd;}
+#ourads img {display:block;margin:0 auto;}
+
+/* 当季精选 */
+#selected {}
+.homepage-title {font-size:36px;line-height:130px;text-align:center;}
+#selected .wrap-scr {width:1220px;}
+.selected-one {float:left;position:relative;width:285px;height:400px;overflow:hidden;background:#fff;margin:0 10px 20px 10px;}
+.selected-more {clear:both;padding:20px 0 40px;}
+.selected-more .btn-wht-m:hover {
+	-o-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-ms-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+	cursor:pointer;
+	}
+.selected-one .pic {width:285px;height:180px;overflow:hidden;}
+.selected-one h4,.selected-one h5 {font-size:16px;margin:0 20px;}
+.selected-one h4 {margin-top:15px;color:#5a5a5a;}
+.selected-one h5 {margin-top:25px;color:#aaa;}
+.selected-one .price {position:absolute;bottom:25px;width:100%;text-align:center;color:#f28000;}
+.selected-one .price .ico {font-size:16px;}
+.selected-one .price .number {font-size:22px;}
+.selected-one:hover {
+	-o-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-ms-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+	cursor:pointer;
+	}
+
+/* 明星领队 */
+#star-guides {height:660px;background:#f2efe8 url("../../images/fruit/tubiao/homepage_bg_guide.jpg") no-repeat center top;}
+.star-guides-one {float:left;position:relative;width:285px;height:400px;overflow:hidden;background:#fff;margin-right:20px;font-size:16px;}
+.star-guides-one .pic {width:135px;height:135px;border-radius:50%;background:#f8f8f8;overflow:hidden;margin:40px auto 0;}
+.star-guides-one .pic img {width:135px;height:135px;}
+.star-guides-one h4 {font-size:20px;text-align:center;margin-top:20px;color:#5a5a5a;}
+.star-guides-one p {margin:0 20px;margin-top:16px;color:#5a5a5a;font-size:14px;line-height:24px;}
+.star-guides-one .customers {position:absolute;bottom:25px;width:100%;text-align:center;color:#aaa;}
+
+#guidestar {margin:0 auto;padding:0;list-style:none;width:1200px;height:530px;overflow:hidden;}
+#guidestar li {width:1200px;height:480px;margin:0 auto;}
+p#controls {margin:0;position:relative;}
+#prevBtn,#nextBtn {display:block;margin:0;overflow:hidden;width:50px;height:30px;position:absolute;left:549px;bottom:0;}
+#nextBtn {left:601px;}
+#prevBtn a,#nextBtn a {background:url("../../images/fruit/tubiao/guidestar-arrow.png") no-repeat 0 0;}
+#prevBtn a {display:block;width:50px;height:30px;background-position:0 0;}
+#nextBtn a {display:block;width:50px;height:30px;background-position:-50px 0;}
+#prevBtn a:hover {background-position:0 -30px;}
+#nextBtn a:hover {background-position:-50px -30px;}
+
+/* slide */
+.homepage-slide {}
+.banner { position: relative; overflow: auto; }
+.banner li {list-style:none;width:100%;overflow:hidden;}
+.banner ul li { float: left;}
+.banner ul li img {display:block; width:100%;}
+.banner .dot {
+	-webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+	-moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+	-ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+	-o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+	filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+	}
+.banner .dots {position: absolute;text-align:center;bottom:20px;width:100%;}
+.banner .dots li {display: inline-block;width: 20px;height: 20px;margin: 0 20px;text-indent: -999em;border: 2px solid #fff;border-radius: 20px;cursor: pointer;opacity: .4;-webkit-transition: background .5s, opacity .5s;-moz-transition: background .5s, opacity .5s;transition: background .5s, opacity .5s;}
+.banner .dots li.active {background: #fff;opacity: 1;}
+
+/* 合作伙伴 */
+.co-brands {padding-top:60px;height:80px;}
+.co-brands dl {text-align:center;}
+.co-brands dt {display:inline-block;font-size:24px;vertical-align:top;padding-top:30px;}
+.co-brands dd {display:inline-block;width:190px;height:60px;margin:0 10px;border-radius:4px;background:#fff;padding:10px;}
+
+/* 团队建设 */
+#teambuilding {height:595px;background:url("../../images/fruit/tubiao/homepage_bg_tj.jpg") no-repeat center top;}
+#teambuilding .homepage-title {color:#fff;}
+#teambuilding .wrap-over {}
+.teambuilding-one {float:left;width:285px;height:365px;overflow:hidden;background:rgba(255,255,255,0.5);margin-right:20px;}
+.teambuilding-one .pic {width:265px;height:265px;overflow:hidden;padding:10px;}
+.teambuilding-one .txt {font-size:20px;line-height:70px;text-align:center;color:#525252;}
+.teambuilding-one:hover {
+	-o-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-ms-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-webkit-transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out;
+	cursor:pointer;
+	background:rgba(255,255,255,1);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

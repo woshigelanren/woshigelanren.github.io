@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>todos</title>
+		<link rel="stylesheet" href="../css/todos/app.css">
+		<link rel="stylesheet" href="../css/todos/base.css">
+		<link rel="stylesheet" href="../css/todos/index.css">
+		<script src="../libs/angular.min.js"></script>
+	</head>
+	<body ng-app='todos' ng-cloak ng-controller='selfContr'>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<form ng-submit="add()">
+					<input class="new-todo" placeholder="What needs to be done?" autofocus ng-model='text'>
+				</form>
+			</header>
+			<section class="main">
+				<input class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list">
+					
+					<li ng-repeat='(key,todo) in todos'>
+						<div class="view">
+							<input class="toggle" type="checkbox" ng-checked='{{todo.xuanze}}' ng-click='done(key)'>
+							<label>{{todo.text}}</label>
+							<button class="destroy" ng-click='delete(todos,key)'></button>
+						</div>	
+						<input class="edit" value="Create a TodoMVC template" >
+					</li>
+
+					<li ng-repeat='(key,todo) in doneTodos' class="completed">
+						<div class="view">
+							<input class="toggle" type="checkbox" ng-checked='{{todo.xuanze}}' ng-click='back(key)' >
+							<label>{{todo.text}}</label>
+							<button class="destroy" ng-click='delete(doneTodos,key)'></button>
+						</div>
+						<input class="edit" value="Rule the web">
+					</li>
+				</ul>
+			</section>
+			<footer class="footer">
+				<span class="todo-count"><strong>0</strong> item left</span>
+				<button class="clear-completed">Clear completed</button>
+			</footer>
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+			<p>Created by <a href="http://todomvc.com">you</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+		<script src="../js/todos/app.js"></script>
+		<script src="../js/todos/base.js"></script>
+		<script>
+			var todos = angular.module('todos',[]);
+			todos.controller('selfContr',['$scope',function($scope){
+				$scope.todos = [];
+				$scope.doneTodos = [];
+			
+				$scope.add = function(){
+					// alert('message');
+
+					// if(!$scope.text){
+					// 	return;
+					// }
+					$scope.todos.push({text:$scope.text,xuanze:$scope.xuanze});
+					$scope.text="";
+					
+				}
+				$scope.done = function(key){
+					// alert('message');
+					
+					var todo = $scope.todos.splice(key,1)[0];
+					todo.xuanze = true;
+					$scope.doneTodos.push(todo);
+				}
+				$scope.back = function(key){
+					var todo = $scope.doneTodos.splice(key,1)[0];
+					todo.xuanze = false;
+					$scope.todos.push(todo);
+				}
+
+				//清除
+				$scope.delete = function(todos,key){
+					todos.splice(key,1);
+				}
+				
+			}]);
+		</script>
+	</body>
+</html>
